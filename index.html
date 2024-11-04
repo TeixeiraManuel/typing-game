@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing-game</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+    <div class="modal">
+        <div class="results">
+            <p class="title">Game end</p>
+            <p>words correct: <span id="resultsCorrect">0</span></p>
+            <p>Wrong words: <span id="resultserror">0</span></p>
+        </div>
+        <div>
+            <button class="retry">Retry</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="header">
+                <p class="score">Score: <span id="score">0</span></p>
+                <p class="timer">Time: <span id="timer">60</span>s</p>
+            </div>
+    
+            <div class="word-display">
+                <h1 class="current-word"></h1>
+                <p class="translation"></p>
+            </div>
+    
+            <div class="input-area">
+                <input
+                    class="input" 
+                    type="text" 
+                    id="word-input" 
+                    placeholder="Type the word here..."
+                    autocomplete="off"
+                >
+            </div>
+    
+            <div class="stats">
+                <div class="stat-item">
+                    <p class="stat-value" id="correct">0</p>
+                    <p class="stat-label">Correct</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-value" id="wpm">0</p>
+                    <p class="stat-label">WPM</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-value" id="error">0</p>
+                    <p class="stat-label">Errors</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/js/script.js"></script>
+</body>
+</html>

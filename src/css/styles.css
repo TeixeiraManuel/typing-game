@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    font-size: 63.5%;
+}
+
+:root{
+    --background-color:#f0f2f5;
+    --white-color:#ffff;
+    --red-color:#e74c3c;
+    --yellow-color:#f1c40f;
+    --green-color:#2ecc71;
+    --border-radius:.5rem;
+    --text-color:#2c3e50;
+
+}
+
+body{
+    background-color: var(--background-color);
+    position: relative;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    padding: 4rem ;
+    background-color: var(--white-color);
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    width: 90%;
+    height: 30%;
+    max-width: 600px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--text- );
+}
+
+.word-display{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.word-display h1{
+    margin-bottom: 0.5rem;
+    font-size: 2.8rem;
+    color: var(--text-color);
+}
+
+.word-display p{
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.input-area input{
+    width: 100%;
+    padding: 2rem;
+    display: block;
+    margin: 4rem auto;
+    font-size: 1.6rem;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.input-area input:focus{
+    outline: none;
+    border-color: #3498db;
+}
+
+.stats{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.stats p{
+    color: var(--text-color);
+    font-size: 1.8rem;
+}
+.modal{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top:-10px;
+}
+.modal.on{
+    visibility: visible;
+    transition: all 1s;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem ;
+    background-color: var(--white-color);
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    width: 60%;
+    height: 20%;
+    max-width: 200px;
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+}
+
+.results .title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.results p + p{
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+.modal button{
+    background-color: var(--green-color);
+    border: none;
+    display: block;
+    cursor: pointer;
+    margin: 1rem auto;
+    color: var(--white-color);
+    padding: 1rem 4rem;
+}
